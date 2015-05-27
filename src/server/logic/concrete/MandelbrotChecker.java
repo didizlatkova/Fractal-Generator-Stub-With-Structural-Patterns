@@ -12,13 +12,13 @@ public class MandelbrotChecker {
 	}
 
 	public void checkSomeThings(Configuration configurations) {
-		logger.logMessage("Starting the Mandelbrot algorithm checking");
+		logger.logMessage("Starting the Mandelbrot algorithm checking...");
 		logger.logError("Some failure during Mandelbrot checking, nothing lethal, so continue...");
 		logger.logMessage("Everything is checked!");
 	}
 	
 	public int[][] getFractalImageCoordinates(){
-		logger.logMessage("Getting the fractal image coordinates");
+		logger.logMessage("Getting the fractal image coordinates...");
 		
 		return new int[200][200];
 	}

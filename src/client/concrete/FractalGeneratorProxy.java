@@ -1,7 +1,8 @@
-package server.logic.concrete;
+package client.concrete;
 
 import server.logic.abstracts.ComplexLogger;
 import server.logic.abstracts.FractalGenerator;
+import server.logic.concrete.RealFractalGenerator;
 import server.parameters.abstracts.Configuration;
 
 // Remote Proxy

@@ -1,7 +1,6 @@
 package server.parameters.abstracts;
 
 // Decorator
-
 public abstract class Configuration {
 
 	protected Configuration config;

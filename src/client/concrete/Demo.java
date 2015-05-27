@@ -1,7 +1,6 @@
 package client.concrete;
 
 import server.logic.abstracts.ComplexLogger;
-import server.logic.concrete.FractalGeneratorProxy;
 import server.logic.concrete.FractalLogger;
 import server.parameters.abstracts.Configuration;
 import server.parameters.concrete.Rectangle;
