@@ -11,7 +11,7 @@ public class RealFractalGenerator implements FractalGenerator {
 	private MandelbrotChecker checker;
 	private Painter painter;
 
-	public RealFractalGenerator(FractalLogger logger) {
+	public RealFractalGenerator(ComplexLogger logger) {
 		this.logger = logger;
 		this.checker = new MandelbrotChecker(logger);
 		this.painter = new Painter(logger);		
@@ -23,12 +23,13 @@ public class RealFractalGenerator implements FractalGenerator {
 	}
 
 	public void connect(String host, int port) {
+		logger.logAlways("Connecting to " + host + " on port " + port);
 		// do some connection things
 	}
 
 	@Override
 	public void generateFractal(Configuration configurations) {
-		logger.logMessage("using configurations: " + configurations.asString());
+		logger.logMessage("Configurations - [" + configurations.asString() + "]");
 		checker.checkSomeThings(configurations);
 		int[][] coordinates = checker.getFractalImageCoordinates();
 		painter.paintImage(coordinates);

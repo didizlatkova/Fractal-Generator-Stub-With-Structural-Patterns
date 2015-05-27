@@ -2,20 +2,12 @@ package server.logic.concrete;
 
 import server.logic.abstracts.*;
 
-// Singleton
 public class FractalLogger implements ComplexLogger {
-
-	public static FractalLogger instance;
 
 	private boolean shouldLog;
 
-	public static synchronized FractalLogger getInstance(boolean shouldLog) {
-		if (instance == null) {
-			instance = new FractalLogger();
-		}
-		instance.shouldLog = shouldLog;
-
-		return instance;
+	public FractalLogger(boolean shouldLog) {
+		this.shouldLog = shouldLog;
 	}
 
 	@Override

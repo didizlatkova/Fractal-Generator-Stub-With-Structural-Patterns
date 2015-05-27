@@ -1,10 +1,12 @@
 package server.logic.concrete;
 
+import server.logic.abstracts.ComplexLogger;
+
 public class Painter {
 
-	private FractalLogger logger;
+	private ComplexLogger logger;
 
-	public Painter(FractalLogger logger) {
+	public Painter(ComplexLogger logger) {
 		this.logger = logger;
 	}
 	

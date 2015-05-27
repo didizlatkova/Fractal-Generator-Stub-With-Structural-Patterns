@@ -1,5 +1,6 @@
 package server.logic.concrete;
 
+import server.logic.abstracts.ComplexLogger;
 import server.logic.abstracts.FractalGenerator;
 import server.parameters.abstracts.Configuration;
 
@@ -8,11 +9,11 @@ public class FractalGeneratorProxy implements FractalGenerator {
 
 	private RealFractalGenerator realFractalGenerator;
 
-	private FractalLogger logger;
+	private ComplexLogger logger;
 	private String host;
 	private int port;
 
-	public FractalGeneratorProxy(String host, int port, FractalLogger logger) {
+	public FractalGeneratorProxy(String host, int port, ComplexLogger logger) {
 		this.host = host;
 		this.port = port;
 		this.logger = logger;
@@ -23,6 +24,7 @@ public class FractalGeneratorProxy implements FractalGenerator {
 		realFractalGenerator = new RealFractalGenerator(this.logger);
 		
 		if (realFractalGenerator.canConnect(this.host, this.port)) {
+			
 			realFractalGenerator.connect(this.host, this.port);
 			realFractalGenerator.generateFractal(configurations);
 		}

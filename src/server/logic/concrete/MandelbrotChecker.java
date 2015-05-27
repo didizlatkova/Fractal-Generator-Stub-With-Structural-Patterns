@@ -1,12 +1,13 @@
 package server.logic.concrete;
 
+import server.logic.abstracts.ComplexLogger;
 import server.parameters.abstracts.Configuration;
 
 public class MandelbrotChecker {
 	
-	private FractalLogger logger;
+	private ComplexLogger logger;
 	
-	public MandelbrotChecker(FractalLogger logger){
+	public MandelbrotChecker(ComplexLogger logger){
 		this.logger = logger;
 	}
 
