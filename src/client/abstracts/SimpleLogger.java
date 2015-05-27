@@ -1,4 +1,4 @@
-package server.logic.abstracts;
+package client.abstracts;
 
 public interface SimpleLogger {
 	
